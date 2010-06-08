@@ -16,7 +16,6 @@ Tags: two-columns, flexible-width, theme-options, threaded-comments, black, dark
 
 */
 
-HTML,
 BODY
 {
     margin: 0px;
@@ -27,9 +26,8 @@ BODY
     background: url(robinson-tiles-small.png) top right repeat;
     background-color: #222222;
     color: #ffffff;
-    font-family: 'IM Fell English', Georgia, serif;
-    font-style: italic;
-    font-size: 14px;
+    font-family: 'Molengo', Georgia, serif;
+    font-size: 13px;
 }
 
 A
@@ -58,26 +56,6 @@ BLOCKQUOTE
     overflow: auto;
 }
 
-TABLE
-{
-    border-style: none;
-    font-family: inherit;
-}
-
-TH
-{
-    border: 1px solid #bb2200;
-    padding: 2px 4px;
-    border-style: solid solid solid none;
-}
-
-TD
-{
-    border: 1px solid #444444;
-    padding: 2px 4px;
-    border-style: none solid solid none;
-}
-
 PRE,
 CODE
 {
@@ -93,84 +71,137 @@ H4,
 H5,
 H6
 {
+    font-family: Lobster, Georgia, serif;
     color: #5588ee;
 }
 
-#container
+#stripe
 {
-    width: 90%;
-    height: 80%;
-    margin: 40px auto;
-    padding: 0px;
-    border: 10px solid #ffffff;
-    border-left: 40px solid #ffffff;
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 200px;
+    margin: 0px 40px;
+    padding: 0px 25px;
     background-color: #222222;
+    color: #cccccc;
+    box-shadow: 0px 0px 5px #000000;
+    -webkit-box-shadow: 0 0 5px #000000;
+    -moz-box-shadow: 0px 0px 5px #000000;
 }
 
-#infoheader
+#stripe A
 {
-    float: left;
-    width: 150px;
-    height: 120%;
-    padding: 0px 20px;
-    margin-top: -50px;
-    background-color: #333333;
-    color: #88ddff;
-    font-family: Lobster, Georgia, serif;
-    font-size: 20px;
-    box-shadow: 2px 2px 5px #000000;
-    -webkit-box-shadow: -2px 0px 5px #000000;
-    -moz-box-shadow: 2px 2px 5px #000000;
+    color: #ccddff;
+}
+
+#stripe H2
+{
+    font-family: inherit !important;
+    color: inherit !important;
 }
 
 #title
 {
-    margin: 0px -20px;
+    margin: 0px -25px;
     padding: 10px 20px;
-    background-color: #bb2200;
-    color: #ffffff;
+    font-size: 45px;
+    background-color: #004499;
     text-align: center;
-    font-size: 50px;
 }
 
-#title a
+#title A
 {
     color: #ffffff;
-    text-decoration: none;
-}
-
-#description
-{
-    float: left;
-    padding: 3px 6px;
-    margin-top: 8px;
 }
 
 #rsslink
 {
     float: right;
-    margin-right: 20px;
     margin-top: 10px;
+    margin-left: 20px;
 }
 
-#bottombarbox
+#description
 {
-    clear: both;
-    color: #aaaaaa;
-    padding: 50px 0px;
+    color: #ffee99;
+    padding: 5px 0px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+#sidebar
+{
+    margin-top: 20px;
+    /* LATER: border-top: 10px solid #ffffff; */
+}
+
+.widget
+{
+    border-top: 1px solid #666666;
+}
+
+.widgettitle
+{
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.widgetcontent
+{
+    display: none;
+    margin-bottom: 15px;
+}
+
+.widget UL
+{
+    list-style-type: square;
+    margin: 0px;
+    margin-left: -15px;
+}
+
+.widget UL LI
+{
+    
+}
+
+.widget_calendar
+{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.widget_calendar H2
+{
+    display: none;
+}
+
+.widget_calendar .widgetcontent
+{
+    display: block;
+}
+
+#wp-calendar
+{
+    margin: 0 auto;
+}
+
+#wp-calendar CAPTION
+{
+    font-size: 14px;
+}
+
+#container
+{
+    height: 750px;  /* if you change this, change #stripe's min-height */
+    overflow: auto;
+    margin: 40px 40px 40px 350px;
+    padding: 0px;
+    border: 10px solid #ffffff;
     background-color: #222222;
-    background: #222222 url(images/darkhzgrad.png?v=2) repeat-x top left;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    width: 900px;
-}
-
-.bottombar
-{
-    float: left;
-    width: 260px;
-    margin: 10px 20px;
+    box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
 }
 
 .sbtitle
@@ -179,13 +210,11 @@ H6
     margin: 5px 0px;
     padding-bottom: 3px;
     border-bottom: 1px solid #444444;
-    font-size: medium;
 }
 
 .sbcontent
 {
     display: none;
-    font-size: small;
 }
 
 .sbcontent UL
@@ -207,72 +236,43 @@ H6
     border-top: none;
 }
 
-#single,
-#indexpage,
-#comments
-{
-    clear: both;
-    margin: 0 10%;
-    border: 3px solid #666666;
-    border-left: 25px solid;
-    background-color: #181818;
-    padding: 30px;
-    opacity: 0.94;
-    filter: alpha(opacity = 94);
-}
-
-#single,
-#indexpage
-{
-    border-color: #bb2200;
-    display: none;
-}
-
 .post
 {
-    padding: 0px 10px;
+    margin: 30px 50px;
+    padding: 30px 0px;
     clear: both;
+    border-bottom: 5px solid #997700;
 }
 
-#indexpage .postselected
+.posttitle
 {
-    margin: 20px -55px 20px -70px !important;
-    padding: 20px 30px;
-    border: 3px solid #bb2200;
-    background-color: #111111;
+    font-size: 35px;
 }
 
-.posttitlebar
+.posttitle,
+.entry
 {
-    padding: 3px 0px 6px 0px;
-    border-bottom: 1px solid #666666;
+    /*
+    border-bottom: 5px solid #997700;
+    */
 }
 
-#indexpage .posttitlebar
+.posttitle A
 {
-	cursor: pointer;
-}
-
-#indexpage .posttitlebar .heading
-{
-    letter-spacing: 0.07em;
+    color: inherit !important;
 }
 
 .dateauthor
 {
-    float: right;
-    text-align: right;
-    font-size: small;
-    margin-top: 4px;
-    margin-left: 15px;
+    margin-top: 0px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #666666;
 }
 
 .entry
 {
     line-height: 180%;
     letter-spacing: 0.07em;
-    font-size: 10pt;
-    padding: 5px 15px;
 }
 
 .entry,
@@ -281,36 +281,26 @@ H6
     color: #bbbbbb;
 }
 
-/*
- * TODO:
- * could make this just '.entry' once we are certain we want the jQuery
- * effect for #single .entry
- */
-#indexpage .entry,
-#single .entry
+.entry TABLE
 {
-    display: none;
+    border-style: none;
+    font-family: inherit;
 }
 
-.entry .avatar
+.entry TH
 {
-    display: block;
-    margin: 10px 20px 5px 0px;
-    padding: 4px;
-    float: left;
-    opacity: 0.8;
-    filter: alpha(opacity = 80);
+    border: 1px solid #bb2200;
+    padding: 2px 4px;
+    border-style: solid solid solid none;
 }
 
-.entry .morelink
+.entry TD
 {
-    display: none;
+    border: 1px solid #444444;
+    padding: 2px 4px;
+    border-style: none solid solid none;
 }
 
-#indexpage .entry .morelink
-{
-    display: block;
-}
 
 .entry OL,
 .entry UL
@@ -340,89 +330,19 @@ H6
     border-bottom: 0px none !important;
 }
 
-.postmetabox
-{
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    font-size: small;
-}
-
-#indexpage .postmetabox
-{
-    display: none;
-}
-
-.postmetabutton
-{
-    float: right;
-    margin: 8px 0px; 
-    cursor: pointer;
-}
-
-#single .postmetabutton
-{
-    display: none;
-}
-
 .postmetadata
 {
-    display: none;
     clear: both;
-    line-height: 160%;
-    padding: 7px 15px;
-    border: 1px solid #666666;
-    text-shadow: #000000 -2px -2px 4px;
+    padding: 7px 0px;
+    margin: 40px 0px;
+    color: #aaaaaa;
+    border-top: 1px solid #666666;
+    text-align: right;
 }
 
-#single .postmetadata
+.postmetadata A
 {
-    display: block;
-    margin-top: 30px;
-    background-color: #222222;
-}
-
-.postmetadata DIV
-{
-    border-bottom: 1px solid #666666;
-    padding-bottom: 3px;
-    margin-bottom: 3px;
-    white-space: nowrap;
-}
-
-.postmetadata DIV:last-child
-{
-    border-bottom: none;
-}
-
-.postmetadata a
-{
-    color: #dddddd;
-}
-
-.postcats,
-.posttags
-{
-    padding-top: 5px !important;
-    padding-bottom: 10px !important;
-    padding-right: 40px;
-    margin-top: 8px !important;
-}
-
-.postcats
-{
-    background: url(images/briefcase.png) no-repeat top right;
-}
-
-.posttags
-{
-    background: url(images/tag-orange.png) no-repeat top right;
-}
-
-.clearpostmetafloat
-{
-    clear: both;
-    display: none;
+    color: #44aa00;
 }
 
 #subpagelinks
@@ -435,7 +355,6 @@ H6
 
 #subpagelinks SPAN
 {
-    font-size: large;
     font-weight: normal;
 }
 
@@ -450,7 +369,6 @@ H6
 .navigation
 {
     font-family: Georgia, serif;
-    font-size: x-large;
     margin: 0px 10%;
     margin-top: 40px;
 }
@@ -498,7 +416,6 @@ H6
     padding: 3px 8px;
     background-color: #bb2200;
     color: #ffffff;
-    font-size: large;
 }
 
 .comment,
@@ -615,7 +532,6 @@ H6
     font-family: "Lucida Grande", sans-serif;
     margin-bottom: 4px;
     margin-left: 10px;
-    font-size: medium;
 }
 
 .bottombar #s,
@@ -625,7 +541,6 @@ H6
     border: 1px solid #666666;
     background-color: #000000;
     color: #ffffff;
-    font-size: medium;
 }
 
 #comment
@@ -633,28 +548,6 @@ H6
     width: 85%;
     opacity: 0.6;
     filter: alpha(opacity = 60);
-}
-
-#upgrademsie
-{
-    z-index: 5;
-    position: absolute;
-    display: none;
-    bottom: 0px;
-    left: 30%;
-    width: 40%;
-    border-left: 15px solid #bb2200;
-    background-color: #ffffff;
-    margin: 0px;
-    padding: 10px;
-    color: #bb2200;
-    font-size: large;
-}
-
-#upgrademsie IMG
-{
-    float: left;
-    margin-right: 10px;
 }
 
 /* required as per wordpress.org */
@@ -699,7 +592,6 @@ H6
 
 .wp-caption p.wp-caption-text
 {
-   font-size: 11px;
    line-height: 17px;
    padding: 0 4px 5px;
    margin: 0;

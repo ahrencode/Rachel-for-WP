@@ -23,7 +23,7 @@
     /> <!-- leave this for stats -->
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" />
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=IM+Fell+English:italic" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Molengo" />
 
     <link
         rel="stylesheet"
@@ -40,6 +40,9 @@
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+    <!-- inlude jQuery before we call wp_head(); -->
+    <?php wp_enqueue_script("jquery"); ?>
+
     <?php
         if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
         wp_head();
@@ -51,20 +54,24 @@
 
 <body>
 
-<div id='container'>
+    <div id='stripe'>
 
-    <div id='rsslink'>
-        <a href='<?php bloginfo("rss2_url"); ?>'>
-        <img border='0' align='top' alt='Site RSS'
-            src='<?php print get_bloginfo('template_directory') . "/images/rssgreen.png"; ?>'>
-        </a>
-    </div>
-
-    <div id='infoheader'>
         <div id='title' class='heading'>
             <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a>
         </div>
-        <div id='description'> <?php bloginfo('description'); ?></div>
-        <br clear='all' />
+
+        <div id='rsslink'>
+            <a href='<?php bloginfo("rss2_url"); ?>'>
+            <img border='0' align='top' alt='Site RSS'
+                src='<?php print get_bloginfo('template_directory') . "/rssorange.png"; ?>'>
+            </a>
+        </div>
+
+        <div id='description'><?php bloginfo('description'); ?></div>
+
+        <?php get_sidebar(); ?>
+
     </div>
+
+    <div id='container'>
 

@@ -1,0 +1,13 @@
+jQuery(document).ready
+(
+    function()
+    {
+        jQuery('.widgettitle').click
+        (
+            function()
+            {
+                jQuery(this).parent().find('.widgetcontent').slideToggle(300);
+            }
+        );
+    }
+);
