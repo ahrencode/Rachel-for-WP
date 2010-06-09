@@ -25,14 +25,14 @@ BODY
     border: 0px none;
     background: url(robinson-tiles-small.png) top right repeat;
     background-color: #222222;
-    color: #ffffff;
+    color: #cccccc;
     font-family: 'Molengo', Georgia, serif;
     font-size: 13px;
 }
 
 A
 {
-    color: #88ff55;
+    color: #ff8855;
     text-decoration: none;
 }
 
@@ -41,25 +41,20 @@ A:hover
     text-decoration: none;
 }
 
-IMG
-{
-    border: none 0px;
-}
-
 BLOCKQUOTE
 {
-    border-left: 2px solid #bb2200;
+    border-left: 2px solid #666666;
     padding: 5px 0px 5px 15px;
     margin: 0px;
     margin-left: 15px;
-    color: #dd9955;
+    color: #ccaa88;
     overflow: auto;
 }
 
 PRE,
 CODE
 {
-    color: #ffeeaa;
+    color: #88aa00;
     font-family: monospace;
 }
 
@@ -72,6 +67,7 @@ H5,
 H6
 {
     font-family: Lobster, Georgia, serif;
+    font-weight: normal;
     color: #5588ee;
 }
 
@@ -81,18 +77,17 @@ H6
     top: 0;
     left: 50;
     width: 200px;
+    overflow: hidden;
     margin: 0px 40px;
     padding: 0px 25px;
     background-color: #222222;
     color: #cccccc;
+    border-bottom: 10px solid #ffffff;
     box-shadow: 0px 0px 5px #000000;
     -webkit-box-shadow: 0 0 5px #000000;
     -moz-box-shadow: 0px 0px 5px #000000;
-}
-
-#stripe A
-{
-    color: #ccddff;
+    /* for IE; direction has to be set and so we use top left */
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=5);
 }
 
 #stripe H2
@@ -108,6 +103,7 @@ H6
     font-size: 45px;
     background-color: #004499;
     text-align: center;
+    border-bottom: 10px solid #ffffff;
 }
 
 #title A
@@ -133,6 +129,7 @@ H6
 #sidebar
 {
     margin-top: 20px;
+    border-bottom: 1px solid #666666;
     /* LATER: border-top: 10px solid #ffffff; */
 }
 
@@ -158,11 +155,6 @@ H6
     list-style-type: square;
     margin: 0px;
     margin-left: -15px;
-}
-
-.widget UL LI
-{
-    
 }
 
 .widget_calendar
@@ -191,70 +183,62 @@ H6
     font-size: 14px;
 }
 
-#container
+.widget_search
 {
-    height: 750px;  /* if you change this, change #stripe's min-height */
-    overflow: auto;
-    margin: 40px 40px 40px 350px;
-    padding: 0px;
-    border: 10px solid #ffffff;
-    background-color: #222222;
-    box-shadow: 0 0 10px #000000;
-    -webkit-box-shadow: 0 0 10px #000000;
-    -moz-box-shadow: 0 0 10px #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.sbtitle
-{
-    cursor: pointer;
-    margin: 5px 0px;
-    padding-bottom: 3px;
-    border-bottom: 1px solid #444444;
-}
-
-.sbcontent
+.widget_search LABEL
 {
     display: none;
 }
 
-.sbcontent UL
+#container
 {
-    margin-top: 3px;
-    margin-left: 0px;
-    padding-left: 0px;
-}
-
-.sbcontent LI
-{
-    margin-left: 15px;
-    padding: 3px 0px;
-    border-top: 1px solid #333333;
-}
-
-.sbcontent > UL > LI:first-child
-{
-    border-top: none;
+    /*
+    height: 750px;  /* if you change this, change #stripe's min-height */
+    position: absolute;
+    /*
+    top: 20px;
+    bottom: 20px;
+    overflow: auto;
+    margin: 40px 40px 40px 350px;
+    padding: 0px;
+    border: 10px solid #ffffff;
+    background-color: #aaaaaa;
+    */
+    min-width: 500px;
+    margin: 0px 40px 0px 330px;
+    background-color: #bb2200;
+    border-bottom: 10px solid #ffffff;
+    box-shadow: 0 0 10px #000000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=10);
 }
 
 .post
 {
+    /*
     margin: 30px 50px;
     padding: 30px 0px;
+    */
+    margin: 30px;
+    background-color: #222222;
+    padding: 60px 50px;
     clear: both;
-    border-bottom: 5px solid #997700;
-}
-
-.posttitle
-{
-    font-size: 35px;
+    border: 10px solid #ffffff;
+    box-shadow: 0px 0px 5px #444444;
+    -webkit-box-shadow: 0px 0px 5px #444444;
+    -moz-box-shadow: 0px 0px 5px #444444;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=315;strength=5);
 }
 
 .posttitle,
-.entry
+#commentsheader
 {
-    /*
-    border-bottom: 5px solid #997700;
-    */
+    font-size: 35px;
 }
 
 .posttitle A
@@ -275,30 +259,31 @@ H6
     letter-spacing: 0.07em;
 }
 
-.entry,
-#comments
+.entry IMG
 {
-    color: #bbbbbb;
+    border: 5px solid #cccccc;
 }
 
 .entry TABLE
 {
-    border-style: none;
+    border: 3px solid #cccccc;
+    border-style: solid none solid none;
+    border-collapse: collapse;
     font-family: inherit;
 }
 
 .entry TH
 {
-    border: 1px solid #bb2200;
-    padding: 2px 4px;
-    border-style: solid solid solid none;
+    padding: 3px 4px;
+    border-bottom: 3px solid #666666;
+    text-align: left;
+    color: #ddaa00;
 }
 
 .entry TD
 {
-    border: 1px solid #444444;
+    border-top: 1px solid #666666;
     padding: 2px 4px;
-    border-style: none solid solid none;
 }
 
 
@@ -340,11 +325,6 @@ H6
     text-align: right;
 }
 
-.postmetadata A
-{
-    color: #44aa00;
-}
-
 #subpagelinks
 {
     clear: both;
@@ -366,49 +346,38 @@ H6
     margin-right: 3px;
 }
 
-.navigation
+#indexpage .navigation
 {
-    font-family: Georgia, serif;
-    margin: 0px 10%;
-    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #222222;
+    border-top: 5px solid #ffffff;
 }
 
 .navigation SPAN
 {
-    padding: 5px 12px;
-    background-color: #000000;
-    opacity: 0.7;
+    font-size: 16px;
 }
 
 #creditsbox
 {
-    position: static;
     display: block;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    border: 0px none;
-    background-color: #000000;
-    opacity: 0.6;
-    filter: alpha(opacity = 60);
+    margin: 0px -25px;
+    padding: 5px 10px 8px 10px;
+    margin-top: 30px;
+    border-top: 5px solid #666666;
+    background-color: #333333;
 }
 
 #credits
 {
-    float: right;
-    text-align: right;
+    text-align: center;
     margin: 0px;
-    padding: 3px 10px;
 }
 
 #comments
 {
-    margin: 0px 12% 40px 12%;
-    border-top: 0px none;
     padding: 20px 30px;
-    border-left-color: #666666;
+    background-color: #222222;
 }
 
 .nocomments
@@ -416,6 +385,14 @@ H6
     padding: 3px 8px;
     background-color: #bb2200;
     color: #ffffff;
+}
+
+.comment-body
+{
+    box-shadow: 0px 0px 5px #000000;
+    -webkit-box-shadow: 0px 0px 5px #000000;
+    -moz-box-shadow: 0px 0px 5px #000000;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=5);
 }
 
 .comment,
@@ -433,12 +410,11 @@ H6
     padding: 25px;
     overflow: auto;
     margin-bottom: 20px;
-    background-color: #222222;
 }
 
 .bypostauthor > DIV
 {
-    background-color: #001015;
+    border: 5px solid #666666;
 }
 
 .comment-author
@@ -451,12 +427,15 @@ H6
     margin-right: 25px;
     padding: 5px 10px 5px 0px;
     border-right: 2px solid #bb2200;
+    width: 100px;
 }
 
-.comment-author A,
-.comment-meta A
+.comment-meta
 {
-    color: #88ddff;
+    border-bottom: 1px solid #666666;
+    overflow: auto;
+    padding-bottom: 4px;
+    margin-bottom: 15px;
 }
 
 .comment-author IMG
@@ -505,16 +484,22 @@ H6
 .trackback .reply
 {
     clear: both;
-    float: left;
+    float: right;
     margin-top: 10px;
+    background-color: #000000;
+    padding: 2px 8px 4px 8px;
 }
 
 #respond
 {
     margin-top: 20px;
-    padding: 30px 10px;
-    border-top: 2px solid #bb2200;
-    background: url(images/Pen2.png?v=001) no-repeat center right;
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: #222222;
+    border: 10px solid #666666;
+    box-shadow: 0px 0px 5px #000000;
+    -webkit-box-shadow: 0px 0px 5px #000000;
+    -moz-box-shadow: 0px 0px 5px #000000;
     /* add below attributes to prevent .bypostauthor class from applying, if any */
 }
 
@@ -523,18 +508,11 @@ H6
     margin-bottom: 10px;
 }
 
-.responduser
-{
-}
-
 .cancel-comment-reply
 {
-    font-family: "Lucida Grande", sans-serif;
     margin-bottom: 4px;
-    margin-left: 10px;
 }
 
-.bottombar #s,
 .respondfield INPUT,
 #comment
 {

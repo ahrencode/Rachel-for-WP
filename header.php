@@ -71,6 +71,15 @@
 
         <?php get_sidebar(); ?>
 
+        <?php global $options; if( $options['showcredits'] == 1 ) : ?>
+            <div id='creditsbox'>
+                <div id='credits'>
+                    Substance: <a href='http://wordpress.org/'>WordPress</a>
+                    Style: <a href='http://ahren.org/code/rachel-wp'>Rachel</a>
+                </div>
+            </div>
+        <?php endif; ?>
+
     </div>
 
     <div id='container'>

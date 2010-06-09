@@ -1,7 +1,9 @@
 
-<?php if (have_posts()) : ?>
-
-    <?php while (have_posts()) : the_post(); ?>
+<?php
+    if (have_posts()) :
+        $ctr = 0;
+        while (have_posts()) : $ctr++; the_post();
+?>
 
         <div class="post" id="post-<?php the_ID(); ?>">
 
@@ -13,8 +15,9 @@
 
             <div class='dateauthor'>
                 Posted <?php the_time('M jS, Y') ?> by <?php the_author() ?>
-                (<a href="<?php the_permalink() ?>" rel="bookmark"
-                        title="Permanent Link to <?php the_title(); ?>">Permalink</a>)
+                &nbsp;&nbsp;
+                / <a href="<?php the_permalink() ?>" rel="bookmark"
+                        title="Permanent Link to <?php the_title(); ?>">Permalink</a> /
                 <?php edit_post_link('Edit Entry', '', ''); ?>
             </div>
 
@@ -43,9 +46,10 @@
                         {
                             print
                                 "<a href='" . get_category_link($cat->cat_ID) . "'>" .
-                                "$cat->cat_name</a>, ";
+                                "$cat->cat_name</a> / ";
                         }
                     ?>
+                    <br />
                 <?php endif; ?>
 
                 <?php if( get_the_tags() ) : ?>
@@ -54,12 +58,11 @@
                         print
                             get_the_tag_list(
                                     $before = '',
-                                    $sep = ', ',
+                                    $sep = ' / ',
                                     $after = '');
-                    ?> 
+                    ?> /
+                    <br />
                 <?php endif; ?>
-
-                <br />
 
                 <?php if( ! is_single() ): ?>
                     This post has

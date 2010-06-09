@@ -26,12 +26,12 @@ if ( function_exists('wp_list_comments') ) :
 
         <a href='<?php print get_post_comments_feed_link(); ?>'>
         <img border=0 align='right' width='32' height='32'
-            src='<?php print bloginfo('template_directory') . "/images/rssorange.png"; ?>'></a>
+            src='<?php print bloginfo('template_directory') . "/rssgreen.png"; ?>'></a>
 
         <div id='commentsheader' class='heading'>
-            <img alt='' title='' align='middle'
-                src='<?php print get_bloginfo('template_url') . "/images/bubble_48.png"; ?>'>
-            Read Comments and Respond
+            <img alt='' title='' align='top'
+                src='<?php print get_bloginfo('template_url') . "/bubble_48.png"; ?>'>
+            Comments
         </div>
 
         <i><?php comments_number('No Responses', 'One Response', '% Responses' );?></i>
@@ -46,8 +46,8 @@ if ( function_exists('wp_list_comments') ) :
 
             <div class="navigation">
                 <?php
-                    previous_comments_link('<span style="float: left;">&laquo; previous</span>');
-                    next_comments_link('<span style="float: right;">next &raquo;</span>');
+                    previous_comments_link('<span style="float: left;">&laquo; Previous</span>');
+                    next_comments_link('<span style="float: right;">Next &raquo;</span>');
                 ?>
                 <br clear='all'/>
             </div>
@@ -78,7 +78,7 @@ if ( function_exists('wp_list_comments') ) :
 
                 <div class='heading'>
 
-                    <?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?>
+                    <?php comment_form_title( '<h2>Leave a Reply</h2>', '<h3>Leave a Reply to %s</h3>' ); ?>
 
                     <span class="cancel-comment-reply">
                         <?php cancel_comment_reply_link(); ?>
