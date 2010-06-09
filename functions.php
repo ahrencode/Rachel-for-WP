@@ -26,7 +26,24 @@ register_sidebars
     )
 );
 
+if ( function_exists('register_sidebar_widget') )
+    register_sidebar_widget(__('Search'), 'widget_mytheme_search');
 
+
+//-------------------------------------------------------------------------------
+function widget_mytheme_search()
+{
+?>
+    <div class='widget widget_search'>
+        <h2 class='widgettitle'>Search</h2>
+        <div class='widgetcontent'>
+            <form role='search' method='get' id='searchform'>
+                <input type='text' value='' name='s' id='s' />
+            </form>
+        </div>
+    </div>
+<?php
+}
 
 //-------------------------------------------------------------------------------
 function rachel_admin_menu()
