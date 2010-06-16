@@ -207,7 +207,10 @@ H6
 
 #wp-calendar CAPTION
 {
-    font-size: 14px;
+    font-size: 16px;
+    border-bottom: 1px solid #666666;
+    padding-bottom: 3px;
+    margin-bottom: 8px;
 }
 
 .widget_search
@@ -328,7 +331,8 @@ H6
 }
 
 .entry UL LI,
-.entry OL LI
+.entry OL LI,
+#sidebar LI
 {
     margin: 0px;
     padding: 5px 10px;
@@ -337,7 +341,8 @@ H6
 }
 
 .entry UL LI:last-child,
-.entry OL LI:last-child
+.entry OL LI:last-child,
+#sidebar LI:last-child
 {
     border-bottom: 0px none !important;
 }
