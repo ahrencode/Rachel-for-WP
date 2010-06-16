@@ -1,7 +1,7 @@
 /*  
 Theme Name: Rachel
 Theme URI: http://ahren.org/code/rachel-wp
-Description: A simple theme in memory of Rachel Corrie
+Description: A theme in memory of Rachel
 Version: 0.8
 Author: Ravi Sarma
 Author URI: http://ahren.org/code/
@@ -27,7 +27,7 @@ BODY
     background-color: #222222;
     color: #cccccc;
     font-family: 'Molengo', Georgia, serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 A
@@ -226,10 +226,9 @@ H6
 
 #container
 {
-    /*
-    height: 750px;  /* if you change this, change #stripe's min-height */
     position: absolute;
     /*
+    height: 750px;  /* if you change this, change #stripe's min-height *//*
     top: 20px;
     bottom: 20px;
     overflow: auto;
@@ -424,7 +423,11 @@ H6
     box-shadow: 0px 0px 5px #000000;
     -webkit-box-shadow: 0px 0px 5px #000000;
     -moz-box-shadow: 0px 0px 5px #000000;
+    /*
+     * commented out because the BODY background image shows
+     * through the transparent shadow!
     filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=5);
+    */
 }
 
 .comment,
@@ -532,6 +535,11 @@ H6
     box-shadow: 0px 0px 5px #000000;
     -webkit-box-shadow: 0px 0px 5px #000000;
     -moz-box-shadow: 0px 0px 5px #000000;
+    /*
+     * commented out because the BODY background image shows
+     * through the transparent shadow!
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=5);
+    */
     /* add below attributes to prevent .bypostauthor class from applying, if any */
 }
 
@@ -549,15 +557,13 @@ H6
 #comment
 {
     border: 1px solid #666666;
-    background-color: #000000;
+    background-color: #111111;
     color: #ffffff;
 }
 
 #comment
 {
     width: 85%;
-    opacity: 0.6;
-    filter: alpha(opacity = 60);
 }
 
 /* required as per wordpress.org */

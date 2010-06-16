@@ -22,7 +22,7 @@ register_sidebars
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div></div>',
     	'before_title'  => '<h2 class="widgettitle">',
-    	'after_title'   => '</h2><div class="widgetcontent"'
+    	'after_title'   => '</h2><div class="widgetcontent">'
     )
 );
 
@@ -133,17 +133,10 @@ function rachel_options()
 
     <div style='width: 60%; margin: 30px 40px; background-color: #cceeff; border: 1px solid #88bbcc; padding:
    30px;'>
-        Icons courtesy of:
-            <a href='http://www.Tutorial9.net/'>Tutorial9</a>
-            (Designer: <a href='http://www.ilovecolors.com.ar/'>ilovecolors</a>),
-            <a href='http://jonasraskdesign.com'>JONASRASKDESIGN</a>,
-            <a href='http://www.visualpharm.com/animals_icon_set/'>VisualPharm</a>,
+        Icons and background image courtesy of:
+            <a href='http://en.wikipedia.org/wiki/Aperiodic_tiling'>Wikipedia</a>,
             <a href='http://pixel-mixer.com/'>Pixel Mixer</a>,
-            <a href='http://c9-d.com/blog-105.html#nav'>C9 Design Rinoa icons</a>,
-            <a href='http://www.icojoy.com'>Icojoy</a>,
             <a href='http://www.midtonedesign.com'>midtone design</a>.
-        JavaScript Goodies:
-            <a href='http://jquery.com/'>jQuery</a>.
     </div>
 <?php
 }

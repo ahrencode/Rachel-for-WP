@@ -40,6 +40,10 @@
 
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+    <!--[if IE]>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/ie.css" type="text/css" />
+    <![endif]-->
+
     <!-- inlude jQuery before we call wp_head(); -->
     <?php wp_enqueue_script("jquery"); ?>
 
@@ -48,7 +52,7 @@
         wp_head();
     ?>
 
-    <script type="text/javascript" src="<?php print get_bloginfo('template_url').'/rachel.js'; ?>"></script>
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/rachel.js"></script>
 
 </head>
 
