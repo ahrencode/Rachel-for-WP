@@ -1,17 +1,16 @@
 /*  
 Theme Name: Rachel
 Theme URI: http://ahren.org/code/rachel-wp
-Description: A colourful and font-rich theme in memory of Rachel
-Version: 0.8
+Description: A colourful and font-rich theme in memory of Rachel. This version fixes many issues identified by the WP theme reviewer, as well as a few fixes and small changes. Theme now passes W3C validator for XHTML Transitional 1.0 and CSS 2.1 (for main theme style sheet style.css, ignoring the various -moz and -webkit box shadow and border radius settings).
+Version: 0.9
 Author: Ravi Sarma
 Author URI: http://ahren.org/code/
 Tags: two-columns, flexible-width, theme-options, threaded-comments, black, dark
 
-	Rachel 0.8
+	Rachel 0.9
 	http://ahren.org/code/rachel-wp
 
-	The CSS, XHTML and design are released under the
-	latest GPL (at time of use):
+	The CSS, XHTML and design are released under the GPL:
 	http://www.opensource.org/licenses/gpl-license.php
 
 */
@@ -130,17 +129,17 @@ h6
     border-bottom: 1px solid #666666;
 }
 
+#sidebarhint
+{
+    display: none;
+    color: #0088ff;
+    font-size: 14pt;
+}
+
 .widget
 {
     border-top: 1px solid #666666;
     padding: 10px 0px;
-    background: url(images/down.png) right 10px no-repeat;
-}
-
-.widget_search,
-.widget_calendar
-{
-    background: none;
 }
 
 .widgettitle
@@ -149,18 +148,12 @@ h6
     cursor: pointer;
     margin: 0px 0px;
     margin-bottom: 5px;
+    background: url(images/down.png) right top no-repeat;
 }
 
 .widgetcontent
 {
-    display: none;
     margin-bottom: 15px;
-}
-
-.widget_search .widgetcontent,
-.widget_calendar .widgetcontent
-{
-    display: block;
 }
 
 .widget ul
@@ -259,6 +252,7 @@ h6
 {
     line-height: 180%;
     letter-spacing: 0.07em;
+    color: #dddddd;
 }
 
 .entry img

@@ -8,15 +8,27 @@
 
             <div class='posttitle heading'>
                 <a href="<?php the_permalink() ?>" rel="bookmark"
-                title="<?php printf(__('Permanent Link to %s', 'rachel'), get_the_title()); ?>">
-                <?php the_title(); ?></a>
+                    title="<?php
+                                $permalink_title_attr = 
+                                    esc_attr(sprintf(__('Permanent Link to %s', 'rachel'),
+                                                    the_title_attribute('echo=0')));
+                                print $permalink_title_attr;
+                            ?>"
+                ><?php the_title(); ?></a>
             </div>
 
             <div class='dateauthor'>
-                Posted <?php the_time('M jS, Y') ?> by <?php the_author() ?>
+                <?php
+                    if( ! is_page() )
+                    {
+                        print "Posted ";
+                        the_time('M jS, Y');
+                    }
+                ?>
+                by <?php the_author() ?>
                 &nbsp;&nbsp;
                 / <a href="<?php the_permalink() ?>" rel="bookmark"
-                        title="Permanent Link to <?php the_title(); ?>">Permalink</a> /
+                        title="<?php print $permalink_title_attr; ?>">Permalink</a> /
                 <?php edit_post_link('Edit Entry', '', ''); ?>
             </div>
 

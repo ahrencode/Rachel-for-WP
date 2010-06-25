@@ -30,7 +30,7 @@ if ( function_exists('wp_list_comments') ) :
 
         <div id='commentsheader' class='heading'>
             <img alt='' title='' align='top'
-                src='<?php print get_bloginfo('template_url') . "/images/bubble_48.png"; ?>' />
+                src='<?php print get_bloginfo('template_url') . "/images/comments.png"; ?>' />
             Comments
         </div>
 

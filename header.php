@@ -4,8 +4,8 @@
 
 <head profile="http://gmpg.org/xfn/11">
 
-    <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-    <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
+    <meta http-equiv="Content-Type" content="<?php print esc_attr(get_bloginfo('html_type')); ?>; charset="<?php print esc_attr(get_bloginfo('charset')); ?>" />
+    <meta name="generator" content="WordPress <?php print esc_attr(get_bloginfo('version')); ?>" /> <!-- leave this for stats -->
 
     <title>
         <?php bloginfo('name'); ?>
@@ -27,7 +27,7 @@
     <link
         rel="alternate"
         type="application/rss+xml"
-        title="<?php bloginfo('name'); ?> RSS Feed"
+        title="<?php print esc_attr(get_bloginfo('name')); ?> RSS Feed"
         href="<?php bloginfo('rss2_url'); ?>"
     />
 
@@ -66,7 +66,9 @@
 
         <div id='description'><?php bloginfo('description'); ?></div>
 
-        <p><small>Click on the section headings below to reveal/hide the widget contents</small></p>
+        <div id='sidebarhint'>
+            Click on the section headings below to reveal/hide the contents
+        </div>
 
         <?php get_sidebar(); ?>
 

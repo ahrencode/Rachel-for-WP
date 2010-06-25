@@ -1,11 +1,30 @@
+
 jQuery(document).ready
 (
     function()
     {
-        jQuery('.widgettitle').each(
+        jQuery('.widgettitle').each
+        (
             function()
             {
-                jQuery(this).nextAll().wrapAll('<div class="widgetcontent" />');
+                // if the title is empty, then don't do show/hide
+                if( /^\s*$/.exec(jQuery(this).text()) )
+                    jQuery(this).removeClass('widgettitle');
+                else
+                    jQuery(this).nextAll().wrapAll('<div class="widgetcontent" />');
+            }
+        );
+
+        // some stuff to hint at the collapsible nature of the sidebar widgets
+        jQuery('.widgettitle').attr('title', 'Click here to collapse/expand this section');
+        jQuery('.widgetcontent').slideUp(2000);
+        jQuery('#sidebar').mouseenter
+        (
+            function()
+            {
+                jQuery('#sidebar').unbind('mouseenter');
+                jQuery('#sidebarhint').fadeIn();
+                setTimeout(function() { jQuery('#sidebarhint').fadeOut(3000); }, 5000);
             }
         );
 
@@ -18,3 +37,4 @@ jQuery(document).ready
         );
     }
 );
+

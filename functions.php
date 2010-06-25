@@ -116,8 +116,7 @@ function rachel_options()
    30px;'>
         Icons and background image courtesy of:
             <a href='http://en.wikipedia.org/wiki/Aperiodic_tiling'>Wikipedia</a>,
-            <a href='http://pixel-mixer.com/'>Pixel Mixer</a>,
-            <a href='http://www.midtonedesign.com'>midtone design</a>.
+            <a href='http://www.midtonedesign.com'>midtone design</a> and the KDE project.
     </div>
 <?php
 }
