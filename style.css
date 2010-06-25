@@ -16,32 +16,32 @@ Tags: two-columns, flexible-width, theme-options, threaded-comments, black, dark
 
 */
 
-BODY
+body
 {
     margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
     border: 0px none;
-    background: url(robinson-tiles-small.png) top right repeat;
+    background: url(images/robinson-tiles-small.png) right top repeat;
     background-color: #222222;
     color: #cccccc;
     font-family: 'Molengo', Georgia, serif;
     font-size: 14px;
 }
 
-A
+a
 {
     color: #ff8855;
     text-decoration: none;
 }
 
-A:hover
+a:hover
 {
     text-decoration: none;
 }
 
-BLOCKQUOTE
+blockquote
 {
     border-left: 2px solid #666666;
     padding: 5px 0px 5px 15px;
@@ -51,20 +51,20 @@ BLOCKQUOTE
     overflow: auto;
 }
 
-PRE,
-CODE
+pre,
+code
 {
     color: #88aa00;
     font-family: monospace;
 }
 
 .heading,
-H1,
-H2,
-H3,
-H4,
-H5,
-H6
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
 {
     font-family: Lobster, Georgia, serif;
     font-weight: normal;
@@ -75,7 +75,7 @@ H6
 {
     position: absolute;
     top: 0;
-    left: 50;
+    left: 0;
     width: 200px;
     overflow: hidden;
     margin: 0px 40px;
@@ -84,13 +84,11 @@ H6
     color: #cccccc;
     border-bottom: 10px solid #ffffff;
     box-shadow: 0px 0px 5px #000000;
-    -webkit-box-shadow: 0 0 5px #000000;
+    -webkit-box-shadow: 0px 0px 5px #000000;
     -moz-box-shadow: 0px 0px 5px #000000;
-    /* for IE; direction has to be set and so we use top left */
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=5);
 }
 
-#stripe H2
+#stripe h2
 {
     font-family: inherit !important;
     color: inherit !important;
@@ -106,7 +104,7 @@ H6
     border-bottom: 10px solid #ffffff;
 }
 
-#title A
+#title a
 {
     color: #ffffff;
 }
@@ -130,14 +128,13 @@ H6
 {
     margin-top: 20px;
     border-bottom: 1px solid #666666;
-    /* LATER: border-top: 10px solid #ffffff; */
 }
 
 .widget
 {
     border-top: 1px solid #666666;
     padding: 10px 0px;
-    background: url(down.png) 10px right no-repeat;
+    background: url(images/down.png) right 10px no-repeat;
 }
 
 .widget_search,
@@ -148,6 +145,7 @@ H6
 
 .widgettitle
 {
+    display: block;
     cursor: pointer;
     margin: 0px 0px;
     margin-bottom: 5px;
@@ -159,21 +157,17 @@ H6
     margin-bottom: 15px;
 }
 
-.widget UL
+.widget_search .widgetcontent,
+.widget_calendar .widgetcontent
+{
+    display: block;
+}
+
+.widget ul
 {
     list-style-type: square;
     margin: 0px;
     margin-left: -15px;
-}
-
-.widget_search .widgettitle
-{
-    margin-bottom: 5px;
-}
-
-.widget_search .widgetcontent
-{
-    display: block;
 }
 
 #s
@@ -190,14 +184,9 @@ H6
     text-align: center;
 }
 
-.widget_calendar H2
+.widget_calendar h2
 {
     display: none;
-}
-
-.widget_calendar .widgetcontent
-{
-    display: block;
 }
 
 #wp-calendar
@@ -205,7 +194,7 @@ H6
     margin: 0 auto;
 }
 
-#wp-calendar CAPTION
+#wp-calendar caption
 {
     font-size: 16px;
     border-bottom: 1px solid #666666;
@@ -215,11 +204,11 @@ H6
 
 .widget_search
 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.widget_search LABEL
+.widget_search label
 {
     display: none;
 }
@@ -227,32 +216,17 @@ H6
 #container
 {
     position: absolute;
-    /*
-    height: 750px;  /* if you change this, change #stripe's min-height *//*
-    top: 20px;
-    bottom: 20px;
-    overflow: auto;
-    margin: 40px 40px 40px 350px;
-    padding: 0px;
-    border: 10px solid #ffffff;
-    background-color: #aaaaaa;
-    */
     min-width: 500px;
     margin: 0px 40px 0px 330px;
     background-color: #bb2200;
     border-bottom: 10px solid #ffffff;
-    box-shadow: 0 0 10px #000000;
-    -webkit-box-shadow: 0 0 10px #000000;
-    -moz-box-shadow: 0 0 10px #000000;
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=10);
+    box-shadow: 0px 0px 10px #000000;
+    -webkit-box-shadow: 0px 0px 10px #000000;
+    -moz-box-shadow: 0px 0px 10px #000000;
 }
 
 .post
 {
-    /*
-    margin: 30px 50px;
-    padding: 30px 0px;
-    */
     margin: 30px;
     background-color: #222222;
     padding: 60px 50px;
@@ -261,7 +235,6 @@ H6
     box-shadow: 0px 0px 5px #444444;
     -webkit-box-shadow: 0px 0px 5px #444444;
     -moz-box-shadow: 0px 0px 5px #444444;
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=315;strength=5);
 }
 
 .posttitle,
@@ -270,7 +243,7 @@ H6
     font-size: 35px;
 }
 
-.posttitle A
+.posttitle a
 {
     color: inherit !important;
 }
@@ -288,12 +261,12 @@ H6
     letter-spacing: 0.07em;
 }
 
-.entry IMG
+.entry img
 {
     border: 5px solid #cccccc;
 }
 
-.entry TABLE
+.entry table
 {
     border: 3px solid #cccccc;
     border-style: solid none solid none;
@@ -301,7 +274,7 @@ H6
     font-family: inherit;
 }
 
-.entry TH
+.entry th
 {
     padding: 3px 4px;
     border-bottom: 3px solid #666666;
@@ -309,41 +282,41 @@ H6
     color: #ddaa00;
 }
 
-.entry TD
+.entry td
 {
     border-top: 1px solid #666666;
     padding: 2px 4px;
 }
 
 
-.entry OL,
-.entry UL
+.entry ol,
+.entry ul
 {
     overflow: auto;
     margin: 15px 35px 15px 15px;
     padding: 0px 0px 0px 25px;
 }
 
-.entry UL
+.entry ul
 {
     list-style-type: square;
 }
 
-.entry UL LI,
-.entry OL LI,
-#sidebar LI
+.entry ul li,
+.entry ol li,
+#sidebar li
 {
     margin: 0px;
     padding: 5px 10px;
-    border-bottom: 1px solid #444444;
+    border-top: 1px solid #444444;
     border-left: 1px solid #444444;
 }
 
-.entry UL LI:last-child,
-.entry OL LI:last-child,
-#sidebar LI:last-child
+.entry ul li:first-child,
+.entry ol li:first-child,
+#sidebar li:first-child
 {
-    border-bottom: 0px none !important;
+    border-top: 0px none !important;
 }
 
 .postmetadata
@@ -364,12 +337,12 @@ H6
     border-top: solid 1px #666666;
 }
 
-#subpagelinks SPAN
+#subpagelinks span
 {
     font-weight: normal;
 }
 
-#subpagelinks A
+#subpagelinks a
 {
     padding: 1px 6px 3px 6px;
     border: 1px solid #666666;
@@ -384,7 +357,7 @@ H6
     border-top: 5px solid #ffffff;
 }
 
-.navigation SPAN
+.navigation span
 {
     font-size: 16px;
 }
@@ -411,6 +384,11 @@ H6
     background-color: #222222;
 }
 
+#commentscontainer
+{
+    padding-left: 0px;
+}
+
 .nocomments
 {
     padding: 3px 8px;
@@ -423,11 +401,6 @@ H6
     box-shadow: 0px 0px 5px #000000;
     -webkit-box-shadow: 0px 0px 5px #000000;
     -moz-box-shadow: 0px 0px 5px #000000;
-    /*
-     * commented out because the BODY background image shows
-     * through the transparent shadow!
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=5);
-    */
 }
 
 .comment,
@@ -437,9 +410,9 @@ H6
     list-style-type: none;
 }
 
-.comment > DIV,
-.pingback > DIV,
-.trackback > DIV
+.comment > div,
+.pingback > div,
+.trackback > div
 {
     clear: both;
     padding: 25px;
@@ -447,7 +420,7 @@ H6
     margin-bottom: 20px;
 }
 
-.bypostauthor > DIV
+.bypostauthor > div
 {
     border: 5px solid #666666;
 }
@@ -473,18 +446,16 @@ H6
     margin-bottom: 15px;
 }
 
-.comment-author IMG
+.comment-author img
 {
     float: left;
     clear: left;
     margin-bottom: 6px;
     border: 1px solid #666666;
     padding: 4px;
-    opacity: 0.8;
-    filter: alpha(opacity = 80);
 }
 
-.comment-author CITE
+.comment-author cite
 {
     float: left;
     clear: left;
@@ -495,21 +466,19 @@ H6
     display: none;
 }
 
-.comment P,
-.pingback P,
-.trackback P
+.comment p,
+.pingback p,
+.trackback p
 {
     overflow: auto;
     line-height: 140%;
-    /* TODO: check why we had the below in the first place! IE? Firefox? */
-    /* margin-left: 120px; */
 }
 
 /*
  * don't let the above apply to reply boxes that have been dynanmically
  * moved below the comment
  */
-#respond P
+#respond p
 {
     margin-left: 0px;
 }
@@ -535,11 +504,6 @@ H6
     box-shadow: 0px 0px 5px #000000;
     -webkit-box-shadow: 0px 0px 5px #000000;
     -moz-box-shadow: 0px 0px 5px #000000;
-    /*
-     * commented out because the BODY background image shows
-     * through the transparent shadow!
-    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315;strength=5);
-    */
     /* add below attributes to prevent .bypostauthor class from applying, if any */
 }
 
@@ -553,7 +517,7 @@ H6
     margin-bottom: 4px;
 }
 
-.respondfield INPUT,
+.respondfield input,
 #comment
 {
     border: 1px solid #666666;
@@ -595,7 +559,6 @@ H6
    /* optional rounded corners for browsers that support it */
    border-radius: 3px;
    -moz-border-radius: 3px;
-   -khtml-border-radius: 3px;
    -webkit-border-radius: 3px;
 }
 

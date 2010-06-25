@@ -6,7 +6,7 @@ if( ! is_array(get_option('rachel')) )
 $options = get_option('rachel');
 
 # defaults
-if( ! isset($options['showcredits' ]) ) $options['showcredits '] = 1;
+if( ! isset($options['showcredits']) ) $options['showcredits'] = 1;
 # end defaults
 
 update_option('rachel', $options);
@@ -20,30 +20,11 @@ register_sidebars
     array
     (
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div></div>',
+        'after_widget'  => '</div>',
     	'before_title'  => '<h2 class="widgettitle">',
-    	'after_title'   => '</h2><div class="widgetcontent">'
+    	'after_title'   => '</h2>'
     )
 );
-
-if ( function_exists('register_sidebar_widget') )
-    register_sidebar_widget(__('Search'), 'widget_mytheme_search');
-
-
-//-------------------------------------------------------------------------------
-function widget_mytheme_search()
-{
-?>
-    <div class='widget widget_search'>
-        <h2 class='widgettitle'>Search</h2>
-        <div class='widgetcontent'>
-            <form role='search' method='get' id='searchform'>
-                <input type='text' value='' name='s' id='s' />
-            </form>
-        </div>
-    </div>
-<?php
-}
 
 //-------------------------------------------------------------------------------
 function rachel_admin_menu()
@@ -56,7 +37,7 @@ function rachel_options()
 {
     global $options;
 
-    if( $_POST['action'] == 'save' )
+    if( isset($_POST['action']) && $_POST['action'] == 'save' )
         save_options();
 
 ?>
@@ -113,7 +94,7 @@ function rachel_options()
 
         <h3>General</h3>
 
-        <input type='hidden' id='action' name='action' value='save'>
+        <input type='hidden' id='action' name='action' value='save' />
 
         <input type='checkbox' name='showcredits' id='showcredits'
             <?php print($options['showcredits'] == 1 ? ' checked' : ''); ?> />
@@ -127,7 +108,7 @@ function rachel_options()
         <br/>
         <hr size='1'/>
 
-        <p class='submit'><input type='submit' value='Save Changes' name='save'/></p>
+        <p class='submit'><input type='submit' value='Save Changes' name='save' /></p>
 
     </form>
 
@@ -144,9 +125,9 @@ function rachel_options()
 //------------------------------------------------------------------------------
 function save_options()
 {
-    global $_POST, $options;
+    global $options;
 
-    $options['showcredits' ]    = ( isset($_POST['showcredits' ]) ) ? 1 : 0;
+    $options['showcredits'] = ( isset($_POST['showcredits']) ) ? 1 : 0;
 
     update_option('rachel', $options);
 

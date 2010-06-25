@@ -4,10 +4,8 @@
 
 <head profile="http://gmpg.org/xfn/11">
 
-    <meta
-        http-equiv="Content-Type"
-        content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>"
-    />
+    <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+    <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats -->
 
     <title>
         <?php bloginfo('name'); ?>
@@ -16,11 +14,6 @@
         <?php } ?>
         <?php wp_title(); ?>
     </title>
-
-    <meta
-        name="generator"
-        content="WordPress <?php bloginfo('version'); ?>"
-    /> <!-- leave this for stats -->
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Molengo" />
@@ -67,11 +60,13 @@
         <div id='rsslink'>
             <a href='<?php bloginfo("rss2_url"); ?>'>
             <img border='0' align='top' alt='Site RSS'
-                src='<?php print get_bloginfo('template_directory') . "/rssorange.png"; ?>'>
+                src='<?php print get_bloginfo('template_directory') . "/images/rssorange.png"; ?>' />
             </a>
         </div>
 
         <div id='description'><?php bloginfo('description'); ?></div>
+
+        <p><small>Click on the section headings below to reveal/hide the widget contents</small></p>
 
         <?php get_sidebar(); ?>
 

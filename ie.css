@@ -1,11 +1,37 @@
 
+#stripe
+{
+    /* for IE; direction has to be set and so we use top left */
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=5);
+}
+
 #container
 {
     max-width: 700px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=10);
+}
+
+.post
+{
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#444444,direction=315,strength=5);
 }
 
 .comment-body
 {
     background-color: #222222;
+    /*
+     * commented out because the BODY background image shows
+     * through the transparent shadow!
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=5);
+    */
+}
+
+#respond
+{
+    /*
+     * commented out because the BODY background image shows
+     * through the transparent shadow!
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=315,strength=5);
+    */
 }
 

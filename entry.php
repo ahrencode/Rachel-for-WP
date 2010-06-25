@@ -1,8 +1,7 @@
 
 <?php
     if (have_posts()) :
-        $ctr = 0;
-        while (have_posts()) : $ctr++; the_post();
+        while (have_posts()) : the_post();
 ?>
 
         <div class="post" id="post-<?php the_ID(); ?>">
@@ -78,7 +77,7 @@
 <?php else : ?>
 
     <div class="post">
-        <div class='heading'>Not Found</div>
+        <div class='posttitle heading'>Not Found</div>
             <br/>
             <div class='entry'>
                 Sorry, but you are looking for something that isn't here.

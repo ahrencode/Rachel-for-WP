@@ -25,12 +25,12 @@ if ( function_exists('wp_list_comments') ) :
     <div id='comments'>
 
         <a href='<?php print get_post_comments_feed_link(); ?>'>
-        <img border=0 align='right' width='32' height='32'
-            src='<?php print bloginfo('template_directory') . "/rssgreen.png"; ?>'></a>
+        <img border='0' align='right' width='32' height='32' alt='Comments Feed'
+            src='<?php print bloginfo('template_directory') . "/images/rssgreen.png"; ?>' /></a>
 
         <div id='commentsheader' class='heading'>
             <img alt='' title='' align='top'
-                src='<?php print get_bloginfo('template_url') . "/bubble_48.png"; ?>'>
+                src='<?php print get_bloginfo('template_url') . "/images/bubble_48.png"; ?>' />
             Comments
         </div>
 
@@ -39,10 +39,11 @@ if ( function_exists('wp_list_comments') ) :
         <br />
         <br />
 
-        <div id='commentscontainer'>
         <?php if ( have_comments() ) : ?>
 
-            <?php wp_list_comments('type=all&avatar_size=48'); ?>
+            <ul id='commentscontainer'>
+                <?php wp_list_comments('type=all&avatar_size=48'); ?>
+            </ul>
 
             <div class="navigation">
                 <?php
@@ -132,6 +133,7 @@ if ( function_exists('wp_list_comments') ) :
 
                         <p class='respondfield'>
                             <input type="text" name="email" id="email"
+                                value=
                                 "
                                     <?php
                                         // TODO: remove when 2.7 obsolete
@@ -176,13 +178,12 @@ if ( function_exists('wp_list_comments') ) :
                     -->
 
                     <p>
-                        <textarea name="comment" id="comment" rows="10"
-                            tabindex="4"></textarea>
+                        <textarea name="comment" id="comment" rows="10" tabindex="4"></textarea>
                     </p>
 
                     <p>
                         <input name="submit" type="submit" id="submit" tabindex="5"
-                        value="Submit Comment" />
+                       	    value="Submit Comment" />
                         <?php comment_id_fields(); ?>
                     </p>
 
@@ -195,7 +196,6 @@ if ( function_exists('wp_list_comments') ) :
             </div> <!-- id=respond -->
 
         <?php endif; // commments open then show response box ?>
-        </div> <!-- id=commentscontainer -->
 
     </div> <!-- comments -->
 
