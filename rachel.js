@@ -1,4 +1,4 @@
-
+/* <![CDATA[ */
 jQuery(document).ready
 (
     function()
@@ -24,7 +24,7 @@ jQuery(document).ready
             {
                 jQuery('#sidebar').unbind('mouseenter');
                 jQuery('#sidebarhint').fadeIn();
-                setTimeout(function() { jQuery('#sidebarhint').fadeOut(3000); }, 5000);
+                setTimeout(function() { jQuery('#sidebarhint').fadeOut(1000); }, 5000);
             }
         );
 
@@ -37,4 +37,4 @@ jQuery(document).ready
         );
     }
 );
-
+/* ]]> */
