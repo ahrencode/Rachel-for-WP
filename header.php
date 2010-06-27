@@ -4,7 +4,7 @@
 
 <head profile="http://gmpg.org/xfn/11">
 
-    <meta http-equiv="Content-Type" content="<?php print esc_attr(get_bloginfo('html_type')); ?>" charset="<?php print esc_attr(get_bloginfo('charset')); ?>" />
+    <meta http-equiv="Content-Type" content="<?php print esc_attr(get_bloginfo('html_type')); ?>; charset=<?php print esc_attr(get_bloginfo('charset')); ?>" />
     <meta name="generator" content="WordPress <?php print esc_attr(get_bloginfo('version')); ?>" /> <!-- leave this for stats -->
 
     <title>
@@ -84,4 +84,5 @@
     </div>
 
     <div id='container'>
+        <div id='content'>
 

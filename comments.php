@@ -118,7 +118,7 @@ if ( function_exists('wp_list_comments') ) :
                                 "
                                     <?php
                                         // TODO: remove when 2.7 obsolete
-                                        if( function_exists(esc_attr) )
+                                        if( function_exists('esc_attr') )
                                             echo @esc_attr($comment_author);
                                         else
                                             echo $comment_author;
@@ -137,7 +137,7 @@ if ( function_exists('wp_list_comments') ) :
                                 "
                                     <?php
                                         // TODO: remove when 2.7 obsolete
-                                        if( function_exists(esc_attr) )
+                                        if( function_exists('esc_attr') )
                                             echo @esc_attr($comment_author_email);
                                         else
                                             echo $comment_author_email;
@@ -157,7 +157,7 @@ if ( function_exists('wp_list_comments') ) :
                                 "
                                     <?php
                                         // TODO: remove when 2.7 obsolete
-                                        if( function_exists(esc_attr) )
+                                        if( function_exists('esc_attr') )
                                             echo @esc_attr($comment_author_url);
                                         else
                                             echo $comment_author_url;

@@ -27,7 +27,7 @@ register_sidebars
 );
 
 # finally provide for customisable background image capability in WP >= 3.0
-if( function_exists(add_custom_background) )
+if( function_exists('add_custom_background') )
     add_custom_background();
 
 

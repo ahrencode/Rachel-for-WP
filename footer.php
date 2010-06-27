@@ -1,7 +1,9 @@
 
-    </div> <!-- container -->
+        </div> <!-- content -->
 
-<?php wp_footer(); ?>
+        <?php wp_footer(); ?>
+
+    </div> <!-- container -->
 
 </body>
 

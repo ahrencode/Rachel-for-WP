@@ -2,12 +2,12 @@
 Theme Name: Rachel
 Theme URI: http://ahren.org/code/rachel-wp
 Description: A colourful and font-rich theme in memory of Rachel
-Version: 0.91
+Version: 0.93
 Author: Ravi Sarma
 Author URI: http://ahren.org/code/
 Tags: two-columns, flexible-width, theme-options, threaded-comments, black, dark
 
-	Rachel 0.91
+	Rachel 0.93
 	http://ahren.org/code/rachel-wp
 */
 
@@ -71,8 +71,9 @@ h6
     position: absolute;
     top: 0;
     left: 0;
+    float: left;
     width: 200px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0px 40px;
     padding: 0px 25px;
     background-color: #222222;
@@ -205,8 +206,16 @@ h6
 #container
 {
     position: absolute;
+    left: 330px;
+    top: 0px;
+    margin: 0px 30px 0px 0px;
+}
+
+#content
+{
     min-width: 500px;
-    margin: 0px 40px 0px 330px;
+    padding-top: 1px;   /* both Safari and FF need this, else they add a margin = .post margin-top!! */
+    margin-bottom: 20px;
     background-color: #bb2200;
     border-bottom: 10px solid #ffffff;
     box-shadow: 0px 0px 10px #000000;
@@ -344,7 +353,6 @@ h6
 {
     padding: 15px 30px;
     background-color: #222222;
-    border-top: 5px solid #ffffff;
 }
 
 .navigation span
