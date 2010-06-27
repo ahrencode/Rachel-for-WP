@@ -8,7 +8,9 @@ jQuery(document).ready
             function()
             {
                 // if the title is empty, then don't do show/hide
-                if( /^\s*$/.exec(jQuery(this).text()) )
+                if( /^\s*$/.exec(jQuery(this).text()) ||
+                    /^\s*$/.exec(jQuery(this).html()) ||
+                    /^\s*(\&nbsp\;)*\s*$/.exec(jQuery(this).html()) )
                     jQuery(this).removeClass('widgettitle');
                 else
                     jQuery(this).nextAll().wrapAll('<div class="widgetcontent" />');

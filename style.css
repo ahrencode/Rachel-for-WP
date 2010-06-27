@@ -19,7 +19,7 @@ body
     width: 100%;
     border: 0px none;
     background: url(images/robinson-tiles-small.png) right top repeat;
-    background-color: #222222;
+    background-color: #2d2d2d;
     color: #cccccc;
     font-family: 'Molengo', Georgia, serif;
     font-size: 14px;
@@ -157,7 +157,7 @@ h6
 {
     list-style-type: square;
     margin: 0px;
-    margin-left: -15px;
+    padding: 0px 0px 0px 20px;
 }
 
 #s
